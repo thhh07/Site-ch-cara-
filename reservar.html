@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar — Chacara das Oliveiras</title>
+    <meta
+      name="description"
+      content="Consulte as datas disponiveis para locacao da Chacara das Oliveiras."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="page-reserva">
+    <header class="reserva-header">
+      <nav class="nav container reserva-nav">
+        <a class="logo logo-link" href="./index.html">Chacara das Oliveiras</a>
+        <a class="btn btn-outline" href="./index.html">Voltar ao site</a>
+      </nav>
+    </header>
+
+    <main class="reserva-main container">
+      <h1 class="reserva-title">Datas disponiveis</h1>
+      <p class="reserva-intro">
+        As datas em verde estao livres para reserva. As em cinza ja estao
+        ocupadas. Clique em uma data livre para falar no WhatsApp com o periodo
+        escolhido.
+      </p>
+
+      <div class="calendar-card">
+        <div class="calendar-toolbar">
+          <button type="button" class="calendar-nav" id="cal-prev" aria-label="Mes anterior">
+            &larr;
+          </button>
+          <h2 class="calendar-month" id="cal-month-label"></h2>
+          <button type="button" class="calendar-nav" id="cal-next" aria-label="Proximo mes">
+            &rarr;
+          </button>
+        </div>
+
+        <div class="calendar-legend">
+          <span class="legend-item legend-available"><span class="legend-swatch"></span> Disponivel</span>
+          <span class="legend-item legend-unavailable"><span class="legend-swatch"></span> Indisponivel</span>
+        </div>
+
+        <div class="calendar-grid calendar-weekdays" aria-hidden="true">
+          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span
+          ><span>Qui</span><span>Sex</span><span>Sab</span>
+        </div>
+        <div class="calendar-grid calendar-days" id="cal-days" role="grid"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <span id="year"></span> Chacara das Oliveiras. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./reserva.js"></script>
+  </body>
+</html>
